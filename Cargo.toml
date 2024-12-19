@@ -5,6 +5,7 @@ authors = ["Tom Grushka"]
 description = "sqlx INTERVAL Postgres type with serde Serialize/Deserialize"
 homepage = "https://github.com/dra11y/sqlx-postgres-interval"
 repository = "https://github.com/dra11y/sqlx-postgres-interval"
+license = "MIT"
 edition = "2024"
 
 [dependencies]
