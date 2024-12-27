@@ -1,6 +1,6 @@
 [package]
 name = "sqlx-postgres-interval"
-version = "0.1.0"
+version = "0.2.0"
 authors = ["Tom Grushka"]
 description = "sqlx INTERVAL Postgres type with serde Serialize/Deserialize"
 homepage = "https://github.com/dra11y/sqlx-postgres-interval"
@@ -9,13 +9,15 @@ license = "MIT"
 edition = "2024"
 
 [dependencies]
-chrono = { version = "0.4.39", optional = true }
-pg_interval = "0.4.2"
-serde = { version = "1.0.216", features = ["derive"] }
-sqlx = { version = "0.8.2", features = ["postgres"] }
-time = { version = "0.3.37", optional = true }
+chrono = { version = "0.4.39", optional = true , default-features = false }
+pg_interval = { version = "0.4.2", default-features = false }
+serde = { version = "1.0.216", default-features = false }
+sqlx = { version = "0.8.2", features = ["postgres"], default-features = false }
+time = { version = "0.3.37", optional = true , default-features = false }
+ts-rs = { version = "10.1.0", optional = true , default-features = false }
 
 [features]
 default = []
 chrono = ["dep:chrono"]
 time = ["dep:time"]
+ts-rs = ["dep:ts-rs"]

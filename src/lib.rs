@@ -29,6 +29,8 @@ use sqlx::{
 /// See also:
 ///   - https://en.wikipedia.org/wiki/ISO_8601#Durations
 ///   - https://www.digi.com/resources/documentation/digidocs/90001488-13/reference/r_iso_8601_duration_format.htm
+
+#[cfg_attr(feature = "ts-rs", derive(ts_rs::TS))]
 #[derive(Debug, Clone, PartialEq, Eq)]
 pub struct Interval {
     pub months: i32,
